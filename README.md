@@ -15,10 +15,10 @@ Both tables have API calls that allow for the user to:
 
 Below is a list of recommended inputs to perform API request tests using Postman.
 
-| **HTTP** | **API Path** | **Inputs** |
-
-
-
+| **REST Call** | **HTTP** | **API Path** | **Inputs** |
+|---------------|----------|--------------|------------|
+| Get all Chores |`GET` |`http://localhost:8083/api/chores` | *nothing required* |
+| Get all Entries |`GET`|`http://localhost:8083/api/completed`| *nothing required* |
 
 ### Topics covered in Week 12:
 
