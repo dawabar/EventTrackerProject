@@ -21,8 +21,8 @@ Below is a list of recommended inputs to perform API request tests using Postman
 | Get all Entries |`GET`|`http://localhost:8083/api/completed`| *nothing required* |
 | Get Chore by ID |`GET`|`http://localhost:8083/api/chores/13`| `13` is the ID input |
 | Get Entry by ID |`GET`|`http://localhost:8083/api/completed/1`| `1` is the ID input |
-| Create Entry |`POST`|`http://localhost:8083/api/chores/7/completed`|`{<br>    "person": "Harry",<br>    "payment": 2.0<br>}`|
-| Update Entry |`PUT`|`http://localhost:8083/api/completed/2`|`{<br>    "id": 2,<br>    "person": "Hermione",<br>    "payment": 10.0,<br>     "chore": {<br>        "id": 11,<br>        "name": "Sweep & Mop Floors",<br>        "price": 5.0<br>    }<br>}`|
+| Create Entry |`POST`|`http://localhost:8083/api/chores/7/completed`|`{ "person": "Harry", "payment": 2.0 }`|
+| Update Entry |`PUT`|`http://localhost:8083/api/completed/2`|`{ "id": 2, "person": "Hermione", "payment": 10.0, "chore": { "id": 11, "name": "Sweep & Mop Floors", "price": 5.0 } }`|
 | Delete Entry |`DEL`|`http://localhost:8083/api/completed/2`| *nothing required* |
 | Create Chore |`POST`|||
 | Update Chore |`PUT`|||
