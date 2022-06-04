@@ -4,7 +4,7 @@
 
 This project is designed to show learning about REST API calls.  For this project, we created a simple database, created Java-based Repositories, Services, Service Implementations, and Controllers to execute CRUD operations using Spring Data JPA and REST.
 
-The database tracks chores. One table contains a list of chores with their associated payments for completion. A second table is the ledger, where a user makes an entry for the name of the person who completed the chore, the ID associated with the chore (for a many-to-one lookup), and the amount paid (which can be higher if the chore is based on hours worked).
+***CHOREX*** (_Chore Exchange_) is a database that tracks chores. One table contains a list of chores with their associated payments for completion. A second table is the ledger, where a user makes an entry for the name of the person who completed the chore, the ID associated with the chore (for a many-to-one lookup), and the amount paid (which can be higher if the chore is based on hours worked).
 
 Both tables have API calls that allow for the user to:
 - query for a single Chore or Entry (READ)
