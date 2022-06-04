@@ -13,7 +13,7 @@ Both tables have API calls that allow for the user to:
 - DELETE a Chore or Entry
 - UPDATE (modify) a Chore or Entry
 
-Below is a list of recommended inputs to perform API request tests using Postman.
+Below is a list of recommended inputs to perform API request tests using Postman. These assume that the database is clean, or the input values for Chores or Entries will have to be incremented to account for additional entries before these.
 
 | **REST Call** | **HTTP** | **API Path** | **Inputs** |
 |---------------|----------|--------------|------------|
@@ -24,9 +24,9 @@ Below is a list of recommended inputs to perform API request tests using Postman
 | Create Entry |`POST`|`http://localhost:8083/api/chores/7/completed`|`{ "person": "Harry", "payment": 2.0 }`|
 | Update Entry |`PUT`|`http://localhost:8083/api/completed/2`|`{ "id": 2, "person": "Hermione", "payment": 10.0, "chore": { "id": 11, "name": "Sweep & Mop Floors", "price": 5.0 } }`|
 | Delete Entry |`DEL`|`http://localhost:8083/api/completed/2`| *nothing required* |
-| Create Chore |`POST`|||
-| Update Chore |`PUT`|||
-| Delete Chore |`DEL`|||
+| Create Chore |`POST`|`http://localhost:8083/api/chores`|`{ "name": "Solve the Riemann Hypothesis", "price": 200.0 }`|
+| Update Chore |`PUT`|`http://localhost:8083/api/chores/32`|`{ "id": 32, "name": "Solve global warming", "price": 900.0 }`|
+| Delete Chore |`DEL`|`http://localhost:8083/api/chores/32`| *nothing required* |
 
 
 ### Topics covered in Week 12:
