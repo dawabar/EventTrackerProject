@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CHOREX</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<main class="container"></main>
+	<h1>CHOREX: Chore & Exchange</h1>
+	<form>
+			<input type='submit' value='Open New Chore Form'
+				onclick="displayAddChoreForm()">
+	</form>
+	
+		
+	<div id='newChoreForm' class='newChoreForm'>
+	<form>
+		<label for='newChoreName'>Chore Name:</label>
+		<input type='text' name='newChoreName' id='newChoreName'><br>
+		<label for='newChorePrice'>Price:</label>
+		<input type='number' step='0.01' name='newChorePrice' id='newChorePrice'><br>
+		<input type='submit' value='Add Chore' onclick=''>
+	</form>
+	<hr>
+	</div>
+	
+
+	<div id='chore'></div>
+	<hr>
+
+	<div id='choresList'>
+		<table>
+			<thead></thead>
+			<tbody id='choresTableRows'></tbody>
+		</table>
+	</div>
+</body>
+</html>

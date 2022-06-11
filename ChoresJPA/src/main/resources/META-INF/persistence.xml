@@ -6,6 +6,7 @@
     
     <!-- BGIN ENTITIES -->
       <class>com.skilldistillery.chores.entities.Chore</class>
+      <class>com.skilldistillery.chores.entities.Entry</class>
 
 	<!-- END ENTITIES -->
     <properties>
