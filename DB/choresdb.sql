@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `entry` (
   `payment` DECIMAL(5,2) NOT NULL,
   `chore_id` INT NOT NULL,
   `person` VARCHAR(45) NOT NULL,
+  `paid` TINYINT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   INDEX `fk_ledger_chore_idx` (`chore_id` ASC),
   CONSTRAINT `fk_ledger_chore`
@@ -103,7 +104,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `choresdb`;
-INSERT INTO `entry` (`id`, `payment`, `chore_id`, `person`) VALUES (1, 3.00, 28, 'Joe');
+INSERT INTO `entry` (`id`, `payment`, `chore_id`, `person`, `paid`) VALUES (1, 3.00, 28, 'Joe', 0);
 
 COMMIT;
 

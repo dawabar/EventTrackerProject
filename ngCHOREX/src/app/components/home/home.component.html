@@ -1,0 +1,87 @@
+<h1>CHOREX | Chore & Exchange</h1>
+
+<div *ngIf="!selected">
+  <button class="btn btn-outline-primary" (click)="addChoreButtonValue()">
+    {{ addChoreButton }}
+  </button>
+  <div *ngIf="!choreButtonSelected">
+    <label for="name" class="form-label">Chore:</label>
+    <input
+    type="text"
+    class="form-control"
+    name="name"
+    id="name"
+    [(ngModel)]="newChore.name"
+    />
+    <label for="price" class="form-label">Pay:</label>
+    <input
+    type="number"
+    class="form-control"
+    min="0"
+    max="999"
+    step="0.1"
+    name="price"
+    id="price"
+    [(ngModel)]="newChore.price"
+    />
+    <button class="btn btn-outline-primary" (click)="addChore(newChore)">
+      Add
+    </button>
+  </div>
+</div>
+<hr />
+<div *ngIf="!selected">
+  <table class="table table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let chore of chores" (click)="displayChore(chore)">
+        <td>{{ chore.id }}</td>
+        <td>{{ chore.name }}</td>
+        <td>{{ chore.price | currency }}</td>
+        <td>
+          <button class="btn btn-outline-primary" (click)="displayChore(chore)">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="selected && !editChore">
+  <h4>Chore: {{ selected?.name }}</h4>
+  <p>ID: {{ selected?.id }}</p>
+  <p>Price: {{ selected?.price | currency }}</p>
+  <button class="btn btn-outline-primary" (click)="displayTable()">
+    Return to list
+  </button>
+  <button class="btn btn-outline-dark" (click)="setEditChore()">
+    Edit
+  </button>
+  <button class="btn btn-outline-danger" (click)="deleteChore(selected.id)">
+    Delete
+  </button>
+</div>
+
+<div *ngIf="editChore">
+  Chore: <input type="text" name="name" [(ngModel)]="editChore.name" /><br />
+  Price:
+  <input
+    type="number"
+    name="price"
+    [(ngModel)]="editChore.price"
+  /><br />
+  <button class="btn btn-outline-danger" (click)="editChore = null">
+    Cancel
+  </button>
+  <button class="btn btn-outline-primary" (click)="updateChore(editChore)">
+    Save
+  </button>
+</div>

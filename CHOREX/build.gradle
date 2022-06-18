@@ -6,6 +6,7 @@ plugins {
 }
 
 war {
+  enabled = true
   // Gradle will replace the variable archivesBaseName
   // with our app name, as defined in settings.gradle
   archiveFileName = "${archivesBaseName}.war"
@@ -24,6 +25,7 @@ dependencies {
 	implementation project(':ChoresJPA')
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation ('org.springframework.boot:spring-boot-starter-tomcat')
 	runtimeOnly 'mysql:mysql-connector-java'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
