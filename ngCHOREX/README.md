@@ -1,27 +1,57 @@
-# NgCHOREX
+# EventTrackerProject - Front End with Angular and Bootstrap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+### Description
 
-## Development server
+This project is to create a full-stack single-page web application (SPA).  [In week 1 we created the back-end Java framework](../README.md). [In week 2 we added an HTML/JavaScript front end](../README_API.md).  For this project, we created an Angular/Bootstrap front-end that provides a clean graphical interface for a good user experience.  This is based on last week's work creating a front-end with HTML and JavaScript.  It's all based on Java-based Repositories, Services, Service Implementations, and Controllers to execute CRUD operations using Spring Data JPA and REST with a MySQL database.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+***CHOREX*** (_Chore Exchange_) is a database that tracks chores. One table contains a list of chores with their associated payments for completion. A second table is the ledger, where a user makes an entry for the name of the person who completed the chore, the ID associated with the chore (for a many-to-one lookup), and the amount paid (which can be higher if the chore is based on hours worked).
 
-## Code scaffolding
+Both tables have API calls that allow for the user to:
+- query for a single Chore or Entry (READ)
+- query for all Chores or Entries (READ)
+- CREATE a new Chore or Entry
+- UPDATE (modify) a Chore or Entry
+- DELETE a Chore or Entry
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Topics covered in Week 14:
 
-## Build
+**Angular (with TypeScript)**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Data binding in components
+- Directives in HTML tags
+- Component methods
+- Event binging
+- Data models
+- CSS (with Angular conditional formatting)
+- Bootstrap integration
+- Dependency injection
+- HttpClient & CRUD operations
+- Observables
+- Routing
+- Pipes
 
-## Running unit tests
+### Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- MySQL
+- MySQL Workbench (for creating the database and populating basic content)
+- Java
+- Spring Tool Suite
+- Spring Data JPA (Java Persistence API)
+- Angular
+- Bootstrap
+- Git
+- GitHub
+- Markdown (for README.md)
+- Slack
+- Zoom
+- Browser (Chrome-focused)
+- Unix/Linux Terminal
+- AWS (Amazon Web Services)
 
-## Running end-to-end tests
+### Lessons Learned
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+TypeScript provides the structure of an OOP language with the browser compatibility needed for creating powerful sites with far less effort. Angular adds several built-in capabilities that further extend TypeScript, giving the user a good amount of control in application development.
 
-## Further help
+This has been the best experience with front-end development that I've ever had. I wish I knew about JavaScript frameworks like this years ago. Though my previous experience was limited, seeing the power of an application design framework like Angular has given me new insights into how software developers can create high-quality sites in such a short period of time.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+I have found that I enjoy creating front-end interfaces more than back-end structure. My design skills are still limited, but my love of ergonomics really drives my passion for creating a high-quality experience for users that is both intuitive and pleasing.
